@@ -1,29 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="currency_converter.css">
     <title>Currency Converter</title>
+    <link rel="stylesheet" href="currency_converter.css">
+    <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@400;500;600;700;800&family=Roboto:ital,wght@0,300;0,700;0,900;1,300;1,400;1,500&family=Vina+Sans&display=swap" rel="stylesheet">
+    <script src="currency_converter.js"></script>
 </head>
-<body>
-    <div class="container">
-        <h1>Currency Converter</h1>
-        <div>
-            <label for="sourceCurrency">Source Currency:</label>
-            <select id="sourceCurrency"></select>
+
+<body style="display: flex; flex-direction: column; align-items: center; background-color: rgb(173, 170, 170);">
+    <form style="background-image: linear-gradient(blue,black,rgb(67, 67, 179),black);">
+        <h1>CURRENCY CONVERTER</h1>
+        <div class="from">
+            <label for="source-currency">Source Currency:</label><br>
+            <select id="From">
+                <option value="">Select Currency </option>
+            </select>
+        </div>
+        <div class="to">
+            <label for="target-currency">Target Currency:</label><br>
+            <select id="To">
+                <option value="">Select Currency </option>
+            </select>
         </div>
         <div>
-            <label for="targetCurrency">Target Currency:</label>
-            <select id="targetCurrency"></select>
+            <label for="amount" id="amountHeader">Amount:</label><br>
+            <input type="text" placeholder="Enter Amount" id="textbox">
         </div>
-        <div>
-            <label for="amount">Amount:</label>
-            <input type="number" id="amount" placeholder="Enter amount" />
-        </div>
-        <button id="convertBtn">Convert</button>
-        <div id="result"></div>
-    </div>
-    <script src="index.js"></script>
+
+        <button type="button" id="convertBtn">Convert</button>
+        <div id="resultContainer" style="margin-top: 20px; font-size: 18px; color:aliceblue;"></div>
+    </form>
 </body>
+
 </html>
