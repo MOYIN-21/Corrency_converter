@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="currency_converter.css">
+    <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@400;500;600;700;800&family=Roboto:ital,wght@0,300;0,700;0,900;1,300;1,400;1,500&family=Vina+Sans&display=swap" rel="stylesheet">
+    <script src="currency_converter.js"></script>
+</head>
+
+<body style="display: flex; flex-direction: column; align-items: center; background-color: rgb(173, 170, 170);">
+    <form style="background-image: linear-gradient(blue,black,rgb(67, 67, 179),black);">
+        <h1>CURRENCY CONVERTER</h1>
+        <div class="from">
+            <label for="source-currency">Source Currency:</label><br>
+            <select id="From">
+                <option value="">Select Currency </option>
+            </select>
+        </div>
+        <div class="to">
+            <label for="target-currency">Target Currency:</label><br>
+            <select id="To">
+                <option value="">Select Currency </option>
+            </select>
+        </div>
+        <div>
+            <label for="amount" id="amountHeader">Amount:</label><br>
+            <input type="text" placeholder="Enter Amount" id="textbox">
+        </div>
+
+        <button type="button" id="convertBtn">Convert</button>
+        <div id="resultContainer" style="margin-top: 20px; font-size: 18px; color:aliceblue;"></div>
+    </form>
+</body>
+
+</html>
